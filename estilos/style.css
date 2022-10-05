@@ -38,7 +38,7 @@ iframe#tela {
     top: 80px;
     left: 22px;
     height: 471px;
-    width: 269px;
+    width: 267px;
 }
 
 section#redes-sociais {
@@ -58,4 +58,30 @@ section#redes-sociais img:hover {
     transform: translate(-5px, -5px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.644);
     transition: transform .3s, border .1s;
+}
+
+h1 {
+    position: absolute; 
+    font-size: 2.5rem;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    color: #2cc3ff;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #2cc3ff;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    70% {
+        width: 100%;
+    }
 }
